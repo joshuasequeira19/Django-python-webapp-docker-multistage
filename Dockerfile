@@ -18,7 +18,7 @@ FROM alpine
 
 COPY --from=builder /app /app
 
-ENTRYPOINT ["python3"]
+ENTRYPOINT ["/app"]
 CMD ["manage.py", "runserver", "0.0.0.0:8000"]
 
 
